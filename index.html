@@ -12,90 +12,13 @@
 
 </head>
 <style>
-    body {
-        padding: 0;
-        margin: 0;
-        box-sizing: border rounded-3-box;
-    }
+    
 
-    .video-container {
-        position: relative;
-        width: 100%;
-        height: 500px;
-        overflow: hidden;
-    }
-
-    .video-container video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .swiper-container {
-        width: 100%;
-    }
-
-    .swiper-slide img {
-        width: 100%;
-        height: 400px;
-        object-fit: cover;
-    }
-
-    .swiper-slide {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .swiper-pagination-bullet {
-        background-color: black !important;
-    }
-
-    .swiper-button-prev,
-    .swiper-button-next {
-        color: white !important;
-        font-size: 26px;
-    }
-
-    .swiper-button-prev::after,
-    .swiper-button-next::after {
-        font-size: 26px;
-    }
-
-    .swiper-slide .card-img-overlay {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        padding: 20px;
-        width: 80%;
-        max-width: 600px;
-    }
-
-    .swiper-slide .card-title {
-        text-align: center;
-    }
-
-    .data {
-        display: flex;
-        overflow-x: auto;
-        gap: 0px 10px;
-    }
-
-    .data::-webkit-scrollbar {
-        display: none;
-    }
-
-    .card {
-        flex: 0 0 auto;
-    }
+    
 </style>
 
 <body>
-    <section id="navbar"></section>
+    <section class="sticky-top" id="navbar"></section>
 
     <section>
         <div class="container-fluid mt-2">
@@ -157,18 +80,18 @@
                         alt="">
                     <h6 class="fw-semibold ms-2">Mens Watches</h6>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12" onclick="subProducts('Vintage Watches')"
+                <div class="col-lg-3 col-md-6 col-sm-12" onclick="subProducts('Ladies Watches')"
                     style="object-fit: cover; cursor: pointer;">
                     <img src="./images/explore (2).jpg" width="300" style="object-fit: cover;" class="border rounded-3"
                         alt="">
-                    <h6 class="fw-semibold ms-2">Vintage Watches</h6>
+                    <h6 class="fw-semibold ms-2">Ladies Watches</h6>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-12"
-                    onclick="subProducts('Affordable Rolex, Omega, Breitling & Co.')"
+                    onclick="subProducts('Pre-Owned Watches')"
                     style="object-fit: cover; cursor: pointer;">
                     <img src="./images/explore (3).jpg" width="300" style="object-fit: cover;" class="border rounded-3"
                         alt="">
-                    <h6 class="fw-semibold ms-2">Affordable Rolex, Omega, Breitling & Co.</h6>
+                    <h6 class="fw-semibold ms-2">Pre-Owned Watches</h6>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-12" onclick="subProducts('Diving Watches')"
                     style="object-fit: cover; cursor: pointer;">
