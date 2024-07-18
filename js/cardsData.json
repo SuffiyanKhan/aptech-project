@@ -1,0 +1,88 @@
+{
+    "ShopData":[
+        {
+            "image":"../images/card (1).png",
+            "name":"OMEGA",
+            "discountPrice":"£8,800.00",
+            "price":"£10,000.00",
+            "title":"De Ville Tresor 36mm Ladies Watch O42858366002001",
+            "Product Code":"17331451",
+            "Manufacturer Product Number":"O42858366002001",
+            "Category":"Watches",
+            "Brand":"Omega",
+            "Guarantee":"Omega 5 Year Guarantee",
+            "Dial Colour":"Silver",
+            "Brand Collections":"De Ville"
+        },
+        {
+            "image":"../images/card (2).png",
+            "name":"RAYMOND WEIL",
+            "discountPrice":"£900.00",
+            "price":"£1,295.00",
+            "title":"Parsifal 30mm Ladies Watch 5180-ST-00995",
+            "Product Code":"17341080",
+            "Manufacturer Product Number":"5180-ST-00995",
+            "Category":"Watches",
+            "Brand":"Raymond Weil",
+            "Guarantee":"Raymond Weil 2 Year Guarantee",
+            "Dial Colour":"Mother of Pearl",
+            "Brand Collections":"Parsifal"
+        },
+        {
+            "image":"../images/card (3).png",
+            "name":"LONGINES",
+            "discountPrice":"£790.00",
+            "price":"£1,350.00 ",
+            "title":"Conquest VHP 36mm MOP Dial Ladies Watch L33164876",
+            "Product Code":"17351005",
+            "Manufacturer Product Number":"L33164876",
+            "Category":"Watches",
+            "Brand":"Longines",
+            "Guarantee":"Longines 2 Year Guarantee",
+            "Dial Colour":"Mother of Pearl",
+            "Brand Collections":"Conquest"
+        },
+        {
+            "image":"../images/card (4).png",
+            "name":"TISSOT",
+            "discountPrice":"£310.00",
+            "price":"£415.00",
+            "title":"PRX Digital 35mm Unisex Watch Black PVD Yellow Gold T1372633302000",
+            "Product Code":"17361712",
+            "Manufacturer Product Number":"T1372633302000",
+            "Category":"Watches",
+            "Brand":"Tissot",
+            "Guarantee":"Tissot 2 Year Guarantee",
+            "Dial Colour":"Gold",
+            "Brand Collections":"PRX"
+        },
+        {
+            "image":"../images/card (5).png",
+            "name":"RADO",
+            "discountPrice":"£2,500.00",
+            "price":"£3,800.00",
+            "title":"Captain Cook Chronograph 43mm R32145158",
+            "Product Code":"17680798",
+            "Manufacturer Product Number":"R32145158",
+            "Category":"Watches",
+            "Brand":"Rado",
+            "Guarantee":"Rado 5 Year Guarantee",
+            "Dial Colour":"Black",
+            "Brand Collections":"Captain Cook"
+        },
+        {
+            "image":"../images/card (6).png",
+            "name":"DOXA",
+            "discountPrice":"£1,000.00",
+            "price":"£1,350.00",
+            "title":"Sub 600T Whitepearl 40mm Mens Watch 862.10.011.23",
+            "Product Code":"18800109",
+            "Manufacturer Product Number":"862.10.011.23",
+            "Category":"Watches",
+            "Brand":"DOXA",
+            "Guarantee":"Tissot 2 Year Guarantee",
+            "Dial Colour":"White",
+            "Brand Collections":"Sub 600T"
+        }
+    ]
+}
