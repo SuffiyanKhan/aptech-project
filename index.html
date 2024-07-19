@@ -9,19 +9,21 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <style>
-    
 
-    
+
+
 </style>
 
 <body>
     <section class="sticky-top" id="navbar"></section>
 
     <section>
-        <div class="container-fluid mt-2">
+        <div class="container-fluid">
             <div class="row">
                 <div class="swiper col-12">
                     <div class="swiper-wrapper">
@@ -71,7 +73,18 @@
         </div>
     </section>
     <section>
-        <div class="container my-5 py-5">
+        <div class="container my-5 ">
+            <h3 class="my-3">BRANDED WATCH SALE</h3>
+            <hr>
+            <div class="row data " style="overflow-x: auto;">
+                <div class="col-lg-2 col-md-6 col-sm-12  d-flex justify-content-between" id="branded"
+                    style="gap: 10px;">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container my-5">
             <h2 class="fw-bold mb-4">Watch Categories</h2>
             <div class="row" style="gap: 20px 0px;">
                 <div class="col-lg-3 col-md-6 col-sm-12" onclick="subProducts('Mens Watches')"
@@ -86,12 +99,11 @@
                         alt="">
                     <h6 class="fw-semibold ms-2">Ladies Watches</h6>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-12"
-                    onclick="subProducts('Pre-Owned Watches')"
+                <div class="col-lg-3 col-md-6 col-sm-12" onclick="subProducts('Pre-Owned Watches')"
                     style="object-fit: cover; cursor: pointer;">
                     <img src="./images/explore (3).jpg" width="300" style="object-fit: cover;" class="border rounded-3"
                         alt="">
-                    <h6 class="fw-semibold ms-2">Pre-Owned Watches</h6>
+                    <h6 class="fw-semibold ms-2"></h6>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-12" onclick="subProducts('Diving Watches')"
                     style="object-fit: cover; cursor: pointer;">
@@ -126,6 +138,26 @@
             </div>
         </div>
     </section>
+    <section>
+        <div class="container mt-5 py-5">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-6 col-md-6 col-sm-12 py-5 px-3 text-white rounded-start" style="background-color: #00191c;">
+                    <h3>WatchVisita Buyer Protection</h3>
+                    <ul>
+                        <li>Payment via the Escrow Service</li>
+                        <li>Commitment to Authenticity</li>
+                        <li>Global money-back guarantee</li>
+                        <li>Strict dealer guidelines</li>
+                        <li>Insured shipments</li>
+                        <li>Chrono24's quality & security team</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 p-0 m-0  rounded-end">
+                    <img src="./images/watchVisita2.png" class="img-fluid rounded-end" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- <section>
         <div class="container-fluid mt-1">
           <div class="row">
@@ -139,11 +171,11 @@
       </section> -->
 
     <script src="./js/navbar.js"></script>
+    <script src="./js/shopCard.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="./js/shopCard.js"></script>
     <script>
         const swiper = new Swiper('.swiper', {
             loop: true, // Enable infinite loop
