@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Black+Ops+One&display=swap');
+
+
 body {
     padding: 0;
     margin: 0;
-    box-sizing: border rounded-3-box;
+    box-sizing: border-box;
 }
 
 .navbar {
@@ -17,7 +21,7 @@ body {
 .video-container {
     position: relative;
     width: 100%;
-    height: 500px;
+    height: 520px;
     overflow: hidden;
 }
 
@@ -87,6 +91,149 @@ body {
 
 .card {
     flex: 0 0 auto;
+}
+
+.list>li {
+    list-style-type: none;
+    font-size: 1.2vw;
+}
+
+.list li {
+    margin-bottom: 0.5em;
+}
+
+.list>li::before {
+    content: "\2713";
+    color: green;
+    margin-right: 14px;
+    font-size: 24px;
+}
+
+.button {
+    --color: #02555e;
+    padding: 0.8em 1.7em;
+    background-color: white;
+    border-radius: .3em;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s;
+    font-weight: 400;
+    font-size: 14px !important;
+    border: 2px solid var(--color);
+    font-family: inherit;
+    text-transform: uppercase;
+    color: var(--color);
+    z-index: 1;
+}
+
+.button::before,
+.button::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--color);
+    transition: 1s ease;
+}
+
+.button::before {
+    top: -1.5em;
+    left: -1.5em;
+}
+
+.button::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+}
+
+.button:hover::before,
+.button:hover::after {
+    height: 410px;
+    width: 410px;
+}
+
+.button:hover {
+    background-color: var(--color);
+    color: white;
+}
+
+.button:active {
+    filter: brightness(.8);
+}
+
+.border-cards {
+    border: 0.1075rem solid #02555e;
+}
+
+.bg-img {
+    width: 100%;
+    background: url(../images/banner2.jpg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 0 71.9125px;
+    padding: 5.375rem 0;
+    color: white;
+}
+
+.image-overlay {
+    position: relative;
+    color: white;
+}
+
+.image-overlay::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    pointer-events: none;
+}
+
+.button2 {
+    color: #02555e;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid #02555e;
+    padding: 10px 20px;
+    font-size: 17px;
+    font-weight: bold;
+    background: transparent;
+    position: relative;
+    transition: all 1s;
+    overflow: hidden;
+}
+
+.button2:hover {
+    color: white;
+}
+
+.button2::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    top: 0;
+    left: -40px;
+    transform: skewX(45deg);
+    background-color: #02555e;
+    z-index: -1;
+    transition: all 1s;
+}
+
+.button2:hover::before {
+    width: 160%;
+}
+
+.font_1 {
+    font-family: "Audiowide", sans-serif;
+    /* font-family: "Black Ops One", system-ui; */
 }
 
 @media (max-width: 991.98px) {
