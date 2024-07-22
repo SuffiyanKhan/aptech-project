@@ -34,16 +34,23 @@ let detailPage = (name) => {
     window.location.href = `../pages/shopdetailpage.html?name=${encodedName}`
 }
 
-
-// branded
-
 fetch("./js/allWatchesData.json")
     .then(res => res.json())
     .then(async (data) => {
         const filteredData = data.allWatchData.filter(watch => watch.Gender === "Branded");
-        await datarender(filteredData)
+        const datas= await shuffleArray(filteredData)
+        await datarender(datas)
     })
     .catch(error => console.error(error.message))
+
+    
+  function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
 
 
 const datarender = (data) => {
@@ -93,7 +100,6 @@ fetch("./js/mostPopularWatches.json")
     })
     .catch(error => console.error(error.message))
 const DeatilPage = (name) => {
-    // detailPage.html
     const encodedName = encodeURIComponent(name);
-    window.location.href = `../pages/detailPage.html?id=${encodedName}`
+    window.location.href = `../pages/shopdetailpage.html?id=${encodedName}`
 }
