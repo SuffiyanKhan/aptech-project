@@ -15,29 +15,37 @@
 
 <body>
     <section id="navbar"></section>
-
+    <section>
+        <div class="container">
+            <div class="row " id="notDataFounds">
+            </div>
+        </div>
+    </section>
     <section>
         <div class="container my-5 pt-4">
-            <p class="fw-semibold fs-5">Product</p>
+            <div class="d-flex justify-content-between align-items-center">
+                <p class="fw-semibold fs-4">Product</p>
+                <p class="fw-semibold fs-5">Total Price: <span id="totalPrice"></span></p>
+            </div>
             <div class="row d-flex justify-conet">
-                <div class="col-lg-8 col-md-5 col-12 border" style="height: 340px; overflow-x: auto;">
-                    <div class="d-flex justify-content-between">
-                        <p>Product</p>
+                <div class="col-lg-12 col-md-12 col-12 border" style="height: 340px; overflow-x: auto;">
+                    <div class="d-flex justify-content-between py-3 px-3">
+                        <p class="fw-bold">Product</p>
                         <div class="d-flex justify-content-between" style="gap: 60px;">
-                            <p>Price</p>
+                            <p class="fw-bold">Price</p>
                         </div>
                     </div>
-                    <div class="d-flex align-items-center justify-content-between border-bottom">
-                        <img src="../images/card (1).png" width="70" alt="">
-                        <p>2022 Starbucks Kermit Unworn Full Set 126610LV</p>
+                    <div class="mt-4 d-flex align-items-center justify-content-between border-bottom">
                         <div class="d-flex" style="gap: 60px;">
-                            <p>$20000</p>
+                            <img id="cardImage" src="" width="70" alt="">
+                            <p class="fw-semibold fs-6" id="title"></p>
                         </div>
+                        <p id="price"></p>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="mt-2 d-flex justify-content-between align-items-center col-lg-8 col-md-5 col-sm-12">
+                <div class="mt-4 d-flex justify-content-between align-items-center col-lg-12 col-md-12 col-sm-12">
                     <button class="button fw-semibold text-capitalize mb-5" onclick="back()">Continue shoping </button>.
                     <button class="button fw-semibold text-capitalize mb-5" onclick="biling()">CheckOut </button>
                 </div>
@@ -47,6 +55,7 @@
 
 
     <script src="../js/navbar.js"></script>
+    <script src="../js/checkOut.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>

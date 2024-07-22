@@ -38,13 +38,13 @@ fetch("./js/allWatchesData.json")
     .then(res => res.json())
     .then(async (data) => {
         const filteredData = data.allWatchData.filter(watch => watch.Gender === "Branded");
-        const datas= await shuffleArray(filteredData)
+        const datas = await shuffleArray(filteredData)
         await datarender(datas)
     })
     .catch(error => console.error(error.message))
 
-    
-  function shuffleArray(array) {
+
+function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [array[i], array[j]] = [array[j], array[i]];

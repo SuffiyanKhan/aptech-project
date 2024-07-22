@@ -12,9 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
 
-    </style>
 </head>
 <style>
 
@@ -23,327 +21,252 @@
 </style>
 
 <body>
-    <section class="sticky-top" id="navbar">
-        <!-- <nav class="navbar px-3 navbar-expand-lg bg-white sticky-top"
-            style="box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;">
+    <div id="loader">
+        <div></div>
+    </div>
+    <div class="content">
+        <section class="sticky-top" id="navbar"></section>
+        <section>
             <div class="container-fluid">
-                <a class="navbar-brand d-flex align-items-center" href="../index.html">
-                    <img src="./images/logo.png" width="100" alt="">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav m-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link fw-bold active" aria-current="page" href="../index.html">Home</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle fw-bold" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Watch Category
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item"
-                                        href="../pages/saleWatchesDetailPage.html?name=Mens Watches">Mens Watches</a>
-                                </li>
-                                <li><a class="dropdown-item"
-                                        href="../pages/saleWatchesDetailPage.html?name=Ladies Watches">Ladies
-                                        Watches</a></li>
-                                <li><a class="dropdown-item"
-                                        href="../pages/saleWatchesDetailPage.html?name=Pre-Owned Watches">Pre-Owned
-                                        Watches</a></li>
-                                <li><a class="dropdown-item"
-                                        href="../pages/saleWatchesDetailPage.html?name=Diving Watches">Diving
-                                        Watches</a></li>
-                                <li><a class="dropdown-item"
-                                        href="../pages/saleWatchesDetailPage.html?name=Limited Edition Watches">Limited
-                                        Edition Watches</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link fw-bold" href="#">Contact us</a>
-                        </li>
-                    </ul>
-
-                    <div class="">
-                        <button type="button" class="btn  position-relative" type="button" data-bs-toggle="offcanvas"
-                            data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-                            <i class="fa-solid fa-cart-shopping"></i> <span
-                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill "
-                                style="background-color:#02555e;" id="cart-count">0 <span
-                                    class="visually-hidden">unread messages</span></span>
-                        </button 
-                    </div>
-
-                    </div>
-                </div>
-        </nav>
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasRightLabel">Add to card</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-                <div class=" d-flex ">
-                    <img src="./images/card (1).png" width="60" alt="">
-                    <div>
-                        <p style="font-size: 13px;">Omega</p>
-                        <p style="font-size: 13px;">2022 Starbucks Kermit Unworn Full Set 126610LV</p>
-                    </div>
-                    
-                </div>
-            </div>
-            <div class="d-flex flex-column px-3">
-                <button class="button2 text-capitalize mb-2" onclick="addToCard()"> check to proceed</button>
-                <button class="button2 text-capitalize mb-5"> shoping now</button>
-            </div>
-            <div class="offcanvas-footer">
-            </div>
-        </div> -->
-    </section>
-    <section>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="swiper col-12">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="./images/dresswatches-lg-master.jpg" alt="">
-                            <div class="card-img-overlay ">
-                                <h1 class="card-title">Find your dream watch on the leading marketplace for luxury
-                                    watches.</h1>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./images/lemans-lg-master.jpg" alt="">
-                            <div class="card-img-overlay ">
-                                <h1 class="card-title">Find your dream watch on the leading marketplace for luxury
-                                    watches.</h1>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="./images/popularwatches-lg-master.jpg" alt="">
-                            <div class="card-img-overlay ">
-                                <h1 class="card-title">Find your dream watch on the leading marketplace for luxury
-                                    watches.</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class="container my-5 py-4">
-            <h3 class="my-3">SHOP WATCH SALE</h3>
-            <hr>
-            <div class="row data " style="overflow-x: auto;">
-                <div class="col-lg-2 col-md-6 col-sm-12  d-flex justify-content-between" id="data" style="gap: 10px;">
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-4 col-sm-6 mt-2">
-                <button class="w-100 py-2 fw-semibold button  rounded-1" onclick="shopPage()">SHOP ALL WATCH
-                    SALE</button>
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class="container my-5 ">
-            <h3 class="my-3">BRANDED WATCH SALE</h3>
-            <hr>
-            <div class="row data " style="overflow-x: auto;">
-                <div class="col-lg-2 col-md-6 col-sm-12  d-flex justify-content-between" id="branded"
-                    style="gap: 10px;">
-                </div>
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class="container my-5">
-            <h2 class="fw-bold mb-4">Watch Categories</h2>
-            <div class="row" style="gap: 20px 0px;">
-                <div class="col-lg-3 col-md-6 col-sm-12" onclick="subProducts('Mens Watches')"
-                    style="object-fit: cover; cursor: pointer;">
-                    <div class="card" style="border: none;">
-                        <img src="./images/explore (1).jpg" class="card-img-top rounded-3" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title fw-semibold">Mens Watches</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12" onclick="subProducts('Ladies Watches')"
-                    style="object-fit: cover; cursor: pointer;">
-                    <div class="card" style="border: none;">
-                        <img src="./images/explore (2).jpg" class="card-img-top rounded-3" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title fw-semibold">Ladies Watches</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12" onclick="subProducts('Pre-Owned Watches')"
-                    style="object-fit: cover; cursor: pointer;">
-                    <div class="card" style="border: none;">
-                        <img src="./images/explore (3).jpg" class="card-img-top rounded-3" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title fw-semibold">Pre-Owned Watches</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12" onclick="subProducts('Diving Watches')"
-                    style="object-fit: cover; cursor: pointer;">
-                    <div class="card" style="border: none;">
-                        <img src="./images/explore (4).jpg" class="card-img-top rounded-3" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title fw-semibold">Diving Watches</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12" onclick="subProducts('Bestsellers and iconic watches')"
-                    style="object-fit: cover; cursor: pointer;">
-                    <div class="card" style="border: none;">
-                        <img src="./images/explore (5).jpg" class="card-img-top rounded-3" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title fw-semibold">Bestsellers and iconic watches</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12" onclick="subProducts('Tourbillon Watches')"
-                    style="object-fit: cover; cursor: pointer;">
-                    <div class="card" style="border: none;">
-                        <img src="./images/explore (6).jpg" class="card-img-top rounded-3" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title fw-semibold">Tourbillon Watches</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12" onclick="subProducts('Limited Edition Watches')"
-                    style="object-fit: cover; cursor: pointer;">
-                    <div class="card" style="border: none;">
-                        <img src="./images/explore (7).jpg" class="card-img-top rounded-3" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title fw-semibold">Limited Edition Watches</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-12" onclick="subProducts('Gold Watches')"
-                    style="object-fit: cover; cursor: pointer;">
-                    <div class="card" style="border: none;">
-                        <img src="./images/explore (8).jpg" class="card-img-top rounded-3" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title fw-semibold">Gold Watches</h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class="container mt-5 py-5">
-            <div class="row d-flex justify-content-center">
-                <div class="col-lg-6 col-md-6 col-sm-12 d-flex  align-items-center py-5 px-3 text-white rounded-start"
-                    style="background-color: #00191c;">
-                    <div class="">
-                        <h3 class="ms-4 ">WatchVisita Buyer Protection</h3>
-                        <ul class="list">
-                            <li>Payment via the Escrow Service</li>
-                            <li>Commitment to Authenticity</li>
-                            <li>Global money-back guarantee</li>
-                            <li>Strict dealer guidelines</li>
-                            <li>Insured shipments</li>
-                            <li>Chrono24's quality & security team</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-12 p-0 m-0 d-flex align-items-stretch rounded-end">
-                    <img src="./images/watchVisita2.png" class="img-fluid rounded-end align-self-stretch" alt="">
-                </div>
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class="container my-5 ">
-            <h3 class="my-3">Our Most Popular Models</h3>
-            <hr>
-            <div class="row data " id="mostPopularBrand" style="gap: 0px;">
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class="container-fluid my-5 py-3">
-            <div class="row">
-                <div class="col-12">
-                    <div class="video-container">
-                        <video src="./images/homepage-classic-watches-datejust-video-autoplay.webm" autoplay loop
-                            muted></video>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class="container py-5 my-4">
-            <h3 class="mb-3">Important Facts & Figures</h3>
-            <div class="row mt-5 " style="gap: 0px;">
-                <div class="col-lg-4 col-md-6 col-sm-12 text-center py-4 px-2">
-                    <h1 class="display-4 fw-semibold">20</h1>
-                    <p class="fs-5">years as the leading marketplace for luxury watches</p>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 text-center py-4 px-2">
-                    <h1 class="display-4 fw-semibold">44,000</h1>
-                    <p class="fs-5">trustworthy sellers from over 120 countries</p>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 text-center py-4 px-2">
-                    <h1 class="display-4 fw-semibold">200,000</h1>
-                    <p class="fs-5">customers choose Buyer Protection annually</p>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 text-center py-4 px-2">
-                    <h1 class="display-4 fw-semibold">9,000,000</h1>
-                    <p class="fs-5">website visitors monthly</p>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 text-center py-4 px-2">
-                    <h1 class="display-4 fw-semibold">600,000</h1>
-                    <p class="fs-5">listings covering a wide range of watches</p>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-12 text-center py-4 px-2">
-                    <h1 class="display-4 fw-semibold">6,550,000</h1>
-                    <p class="fs-5">satisfied app users</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="image-overlay bg-img">
-        <div class="bg-img">
-            <div class="container-fluid text-color">
                 <div class="row">
-                    <div class="col-12 p-0 m-0 ">
-
+                    <div class="swiper col-12">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="./images/dresswatches-lg-master.jpg" alt="">
+                                <div class="card-img-overlay ">
+                                    <h1 class="card-title">Find your dream watch on the leading marketplace for luxury
+                                        watches.</h1>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./images/lemans-lg-master.jpg" alt="">
+                                <div class="card-img-overlay ">
+                                    <h1 class="card-title">Find your dream watch on the leading marketplace for luxury
+                                        watches.</h1>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./images/popularwatches-lg-master.jpg" alt="">
+                                <div class="card-img-overlay ">
+                                    <h1 class="card-title">Find your dream watch on the leading marketplace for luxury
+                                        watches.</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section>
-        <div class="container my-5 py-4">
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                    <h3>
-                        WatchVisita Newsletter
-                    </h3>
+        </section>
+        <section>
+            <div class="container my-5 py-4">
+                <h3 class="my-3">SHOP WATCH SALE</h3>
+                <hr>
+                <div class="row data " style="overflow-x: auto;">
+                    <div class="col-lg-2 col-md-6 col-sm-12  d-flex justify-content-between" id="data"
+                        style="gap: 10px;">
+                    </div>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-12 d-flex justify-content-end">
-                    <button class="button2 fw-semibold rounded-1">Subscribe now for free </button>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 mt-2">
+                    <button class="w-100 py-2 fw-semibold button  rounded-1" onclick="shopPage()">SHOP ALL WATCH
+                        SALE</button>
                 </div>
             </div>
-        </div>
-    </section>
-    <footer id="footer"></footer>
+        </section>
+        <section>
+            <div class="container my-5 ">
+                <h3 class="my-3">BRANDED WATCH SALE</h3>
+                <hr>
+                <div class="row data " style="overflow-x: auto;">
+                    <div class="col-lg-2 col-md-6 col-sm-12  d-flex justify-content-between" id="branded"
+                        style="gap: 10px;">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container my-5">
+                <h2 class="fw-bold mb-4">Watch Categories</h2>
+                <div class="row" style="gap: 20px 0px;">
+                    <div class="col-lg-3 col-md-6 col-sm-12" onclick="subProducts('Mens Watches')"
+                        style="object-fit: cover; cursor: pointer;">
+                        <div class="card" style="border: none;">
+                            <img src="./images/explore (1).jpg" class="card-img-top rounded-3" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title fw-semibold">Mens Watches</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12" onclick="subProducts('Ladies Watches')"
+                        style="object-fit: cover; cursor: pointer;">
+                        <div class="card" style="border: none;">
+                            <img src="./images/explore (2).jpg" class="card-img-top rounded-3" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title fw-semibold">Ladies Watches</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12" onclick="subProducts('Pre-Owned Watches')"
+                        style="object-fit: cover; cursor: pointer;">
+                        <div class="card" style="border: none;">
+                            <img src="./images/explore (3).jpg" class="card-img-top rounded-3" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title fw-semibold">Pre-Owned Watches</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12" onclick="subProducts('Diving Watches')"
+                        style="object-fit: cover; cursor: pointer;">
+                        <div class="card" style="border: none;">
+                            <img src="./images/explore (4).jpg" class="card-img-top rounded-3" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title fw-semibold">Diving Watches</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12" onclick="subProducts('Bestsellers and iconic watches')"
+                        style="object-fit: cover; cursor: pointer;">
+                        <div class="card" style="border: none;">
+                            <img src="./images/explore (5).jpg" class="card-img-top rounded-3" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title fw-semibold">Bestsellers and iconic watches</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12" onclick="subProducts('Tourbillon Watches')"
+                        style="object-fit: cover; cursor: pointer;">
+                        <div class="card" style="border: none;">
+                            <img src="./images/explore (6).jpg" class="card-img-top rounded-3" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title fw-semibold">Tourbillon Watches</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12" onclick="subProducts('Limited Edition Watches')"
+                        style="object-fit: cover; cursor: pointer;">
+                        <div class="card" style="border: none;">
+                            <img src="./images/explore (7).jpg" class="card-img-top rounded-3" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title fw-semibold">Limited Edition Watches</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12" onclick="subProducts('Gold Watches')"
+                        style="object-fit: cover; cursor: pointer;">
+                        <div class="card" style="border: none;">
+                            <img src="./images/explore (8).jpg" class="card-img-top rounded-3" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title fw-semibold">Gold Watches</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container mt-5 py-5">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-lg-6 col-md-6 col-sm-12 d-flex  align-items-center py-5 px-3 text-white rounded-start"
+                        style="background-color: #00191c;">
+                        <div class="">
+                            <h3 class="ms-4 ">WatchVisita Buyer Protection</h3>
+                            <ul class="list">
+                                <li>Payment via the Escrow Service</li>
+                                <li>Commitment to Authenticity</li>
+                                <li>Global money-back guarantee</li>
+                                <li>Strict dealer guidelines</li>
+                                <li>Insured shipments</li>
+                                <li>Chrono24's quality & security team</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 p-0 m-0 d-flex align-items-stretch rounded-end">
+                        <img src="./images/watchVisita2.png" class="img-fluid rounded-end align-self-stretch" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container my-5 ">
+                <h3 class="my-3">Our Most Popular Models</h3>
+                <hr>
+                <div class="row data " id="mostPopularBrand" style="gap: 0px;">
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container-fluid my-5 py-3">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="video-container">
+                            <video src="./images/homepage-classic-watches-datejust-video-autoplay.webm" autoplay loop
+                                muted></video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container py-5 my-4">
+                <h3 class="mb-3">Important Facts & Figures</h3>
+                <div class="row mt-5 " style="gap: 0px;">
+                    <div class="col-lg-4 col-md-6 col-sm-12 text-center py-4 px-2">
+                        <h1 class="display-4 fw-semibold">20</h1>
+                        <p class="fs-5">years as the leading marketplace for luxury watches</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 text-center py-4 px-2">
+                        <h1 class="display-4 fw-semibold">44,000</h1>
+                        <p class="fs-5">trustworthy sellers from over 120 countries</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 text-center py-4 px-2">
+                        <h1 class="display-4 fw-semibold">200,000</h1>
+                        <p class="fs-5">customers choose Buyer Protection annually</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 text-center py-4 px-2">
+                        <h1 class="display-4 fw-semibold">9,000,000</h1>
+                        <p class="fs-5">website visitors monthly</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 text-center py-4 px-2">
+                        <h1 class="display-4 fw-semibold">600,000</h1>
+                        <p class="fs-5">listings covering a wide range of watches</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 text-center py-4 px-2">
+                        <h1 class="display-4 fw-semibold">6,550,000</h1>
+                        <p class="fs-5">satisfied app users</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="image-overlay bg-img">
+            <div class="bg-img">
+                <div class="container-fluid text-color">
+                    <div class="row">
+                        <div class="col-12 p-0 m-0 ">
 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container my-5 py-4">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <h3>
+                            WatchVisita Newsletter
+                        </h3>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 d-flex justify-content-end">
+                        <button class="button2 fw-semibold rounded-1">Subscribe now for free </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer id="footer"></footer>
 
+    </div>
 
     <script src="./js/navbar.js"></script>
     <script src="./js/shopCard.js"></script>
@@ -353,6 +276,13 @@
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
+        window.addEventListener('load', function () {
+            // When the page is fully loaded, hide the loader and show the content
+            const loader = document.getElementById('loader');
+            const content = document.querySelector('.content');
+            loader.style.display = 'none';
+            content.style.display = 'block';
+        });
         const swiper = new Swiper('.swiper', {
             loop: true,
             autoplay: {
@@ -375,9 +305,10 @@
             const encodedName = encodeURIComponent(name);
             window.location.href = `../pages/saleWatchesDetailPage.html?name=${encodedName}`
         }
-        const addToCard=()=>{
-            window.location.href= '../pages/addToCard.html'
+        const addToCard = () => {
+            window.location.href = '../pages/addToCard.html'
         }
+
     </script>
 
 </body>

@@ -28,13 +28,13 @@ document.querySelector("#footer").innerHTML =`
         </div>
         <div class="row pt-5 mt-5">
             <div class="col-12 d-flex justify-content-between px-5">
-                <div class="d-flex" style="gap: 15px; color: white;" >
+                <div class="d-flex flex-wrap" style="gap: 15px; color: white;" >
                     <p>Data Privacy Policy</p>
                     <p>Manage Cookies</p>
                     <p>Terms & Conditions</p>
                     <p>Sitemap</p>
                 </div>
-                <div class="d-flex" style="gap: 14px;">
+                <div class="d-flex flex-wrap" style="gap: 14px;">
                     <a href="#">
                         <i class="fa-brands fa-facebook-f fs-5 text-white"></i>
                     </a>
