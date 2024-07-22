@@ -23,13 +23,13 @@ function renderCartItems() {
             <div class="d-flex mb-2">
                 <img src="${item.image}" width="60" alt="">
                 <div>
-                    <p style="font-size: 13px;">${item.brand}</p>
-                    <p style="font-size: 13px;">${item.description}</p>
+                    <p style="font-size: 13px;">${item.title}</p>
+                    <p style="font-size: 13px;">${item.Brand}</p>
                 </div>
             </div>
             <div class="d-flex flex-column px-3">
         <button class="button2 text-capitalize mb-2" onclick="addToCard()"> check to proceed</button>
-        <button class="button2 text-capitalize mb-5"> shopping now</button>
+        <button class="button2 text-capitalize mb-5"onclick="goShopping()"> shopping now</button>
     </div>
             </div>
             `;
@@ -54,6 +54,10 @@ document.querySelector("#navbar").innerHTML = `
                         <li class="nav-item">
                             <a class="nav-link fw-bold active" aria-current="page" href="../index.html">Home</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold " aria-current="page" href="../pages/About.html">About</a>
+                        </li>
+                       
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle fw-bold" href="#" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
@@ -78,7 +82,10 @@ document.querySelector("#navbar").innerHTML = `
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fw-bold" href="#">Contact us</a>
+                            <a class="nav-link fw-bold" href="../pages/Contact.html">Contact us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold" href="../pages/Contact.html">FQA</a>
                         </li>
                     </ul>
 
@@ -107,15 +114,22 @@ document.querySelector("#navbar").innerHTML = `
     </div>
 </div>`;
 
-const navLinks = document.querySelectorAll('.nav-link');
+// const navLinks = document.querySelectorAll('.nav-link');
 
-navLinks.forEach(link => {
-    link.addEventListener('click', function () {
-        navLinks.forEach(nav => nav.classList.remove('active'));
-        this.classList.add('active');
-    });
-});
+// navLinks.forEach(link => {
+//     link.addEventListener('click', function () {
+//         navLinks.forEach(nav => nav.classList.remove('active'));
+//         this.classList.add('active');
+//     });
+// });
 
 document.addEventListener('DOMContentLoaded', () => {
     renderCartItems();
 });
+function addToCard() {
+    window.location.href = '../pages/addToCard.html';
+}
+
+function goShopping() {
+    window.history.back();
+}
