@@ -13,6 +13,7 @@ const addToCard = async (title, Brand, price, image) => {
             cartItems.push(newItem);
         }
         localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        window.location.reload()
     } catch (error) {
         console.error(error.message);
     }

@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const urlParams = new URLSearchParams(queryString);
     const productName = urlParams.get('name');
     const productId = urlParams.get('id');
+    console.log(productId)
 
     fetch("../js/cardsData.json")
         .then(res => res.json())
@@ -24,13 +25,19 @@ document.addEventListener('DOMContentLoaded', () => {
             const filteredData = res.popularWatches.filter(watch => watch.id === productId);
             renderData(filteredData);
         });
-
+        fetch("../js/saleWatches.json")
+        .then(res => res.json())
+        .then(res => {
+            const filteredData = res.saleWatchData.filter(watch => watch.id === productId);
+            renderData(filteredData);
+        });
+// saleWatches
     const renderData = (data) => {
         data.forEach((item) => {
             document.querySelector("#data").innerHTML += `
                 <div class="col-lg-4 col-md-5 col-sm-12 d-flex justify-content-center align-items-center">
                     <div class="">
-                        <img src="${item.image}" class="rounded-3" alt="">
+                        <img src="${item.image}" class="img-fluid rounded-3" alt="">
                     </div>
                 </div>
                 <div class="col-lg-7 col-md-5 col-sm-12 py-5 px-3">
@@ -71,7 +78,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const addToCard = async (title, Brand, price, image) => {
         try {
-            console.log(title);
             const currencySymbol = price.match(/[^0-9.-]+/g) ? price.match(/[^0-9.-]+/g)[0] : '';
             const priceWithoutSymbol = parseFloat(price.replace(/[^0-9.-]+/g, ""));
             let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
@@ -84,12 +90,13 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 cartItems.push(newItem);
             }
+            window.location.reload()
 
             localStorage.setItem('cartItems', JSON.stringify(cartItems));
-            window.location.reload()
         } catch (error) {
             console.error(error.message);
         }
+        window.location.reload()
     };
 
     window.addToCard = addToCard;

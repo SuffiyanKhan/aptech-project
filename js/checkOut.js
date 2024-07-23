@@ -8,21 +8,11 @@ if (data && data.length > 0) {
     data.forEach((datas) => {
         document.querySelector("#title").innerHTML += `<p>${datas.title} X ${datas.quantity}</p>`;
         document.querySelector("#price").innerHTML += `<p>${datas.currency} ${datas.price}</p>`;
-        document.querySelector("#cardImage").src = datas.image
-        // imageElement.src = data.imageSrc;
-        // image
-
-        console.log(datas);
     });
     document.querySelector("#totalPrice").innerHTML = totalPrice
 
 } else {
     document.querySelector("#notDataFound").innerHTML = `
-    <div class="col-12 d-flex justify-content-center align-items-center" style="height: 100vh;">
-          <h3 class="fw-semibold">Not Data Found Yet!</h3>
-        </div>
-    `
-    document.querySelector("#notDataFounds").innerHTML = `
     <div class="col-12 d-flex justify-content-center align-items-center" style="height: 100vh;">
           <h3 class="fw-semibold">Not Data Found Yet!</h3>
         </div>
@@ -121,7 +111,7 @@ async function validateForm() {
         customClass: {
             confirmButton: 'button'
         }
-    });
+    })
     if (accept) {
         Swal.fire({
             title: "Hurry !",
@@ -134,7 +124,7 @@ async function validateForm() {
         }).then((result) => {
             if (result) {
                 localStorage.removeItem('cartItems');
-                window.history.back();
+                window.location.href="../index.html"
             }
         })
     }

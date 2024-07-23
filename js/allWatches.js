@@ -12,13 +12,13 @@ fetch("../js/allWatchesData.json")
     await datarender(datas)
   })
 
-  function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-    console.log(array)
-    return array;
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  console.log(array)
+  return array;
 }
 
 
@@ -52,6 +52,6 @@ let datarender = async (data) => {
 };
 
 const detailPage = (id) => {
-   const encodedName = encodeURIComponent(id);
-    window.location.href = `../pages/shopdetailpage.html?id=${encodedName}`
+  const encodedName = encodeURIComponent(id);
+  window.location.href = `../pages/shopdetailpage.html?id=${encodedName}`
 }

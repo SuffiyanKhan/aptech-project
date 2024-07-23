@@ -15,7 +15,11 @@ function renderCartItems() {
     offcanvasBody.innerHTML = '';
 
     if (cartItems.length === 0) {
-        offcanvasBody.innerHTML = '<p>No data yet</p>';
+        document.querySelector("#notDataFound").innerHTML = `
+         <div class="col-12 d-flex justify-content-center align-items-center" style="height: 100vh;">
+          <h3 class="fw-semibold">Not Data Found Yet!</h3>
+        </div>
+        `
     } else {
         cartItems.forEach(item => {
             offcanvasBody.innerHTML += `
@@ -27,10 +31,7 @@ function renderCartItems() {
                     <p style="font-size: 13px;">${item.Brand}</p>
                 </div>
             </div>
-            <div class="d-flex flex-column px-3">
-        <button class="button2 text-capitalize mb-2" onclick="addToCard()"> check to proceed</button>
-        <button class="button2 text-capitalize mb-5"onclick="goShopping()"> shopping now</button>
-    </div>
+            
             </div>
             `;
         });
@@ -52,41 +53,29 @@ document.querySelector("#navbar").innerHTML = `
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav m-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link fw-bold active" aria-current="page" href="../index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link fw-bold " aria-current="page" href="../pages/About.html">About</a>
-                        </li>
-                       
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle fw-bold" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Watch Category
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item"
-                                        href="../pages/saleWatchesDetailPage.html?name=Mens Watches">Mens Watches</a>
-                                </li>
-                                <li><a class="dropdown-item"
-                                        href="../pages/saleWatchesDetailPage.html?name=Ladies Watches">Ladies
-                                        Watches</a></li>
-                                <li><a class="dropdown-item"
-                                        href="../pages/saleWatchesDetailPage.html?name=Pre-Owned Watches">Pre-Owned
-                                        Watches</a></li>
-                                <li><a class="dropdown-item"
-                                        href="../pages/saleWatchesDetailPage.html?name=Diving Watches">Diving
-                                        Watches</a></li>
-                                <li><a class="dropdown-item"
-                                        href="../pages/saleWatchesDetailPage.html?name=Limited Edition Watches">Limited
-                                        Edition Watches</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link fw-bold" href="../pages/Contact.html">Contact us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link fw-bold" href="../pages/Contact.html">FQA</a>
-                        </li>
+  <a class="nav-link fw-bold active" id="home-link" aria-current="page" href="../index.html">Home</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link fw-bold" id="about-link" aria-current="page" href="../pages/About.html">About</a>
+</li>
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Watch Category
+  </a>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" id="mens-watches-link" href="../pages/saleWatchesDetailPage.html?name=Mens Watches">Mens Watches</a></li>
+    <li><a class="dropdown-item" id="ladies-watches-link" href="../pages/saleWatchesDetailPage.html?name=Ladies Watches">Ladies Watches</a></li>
+    <li><a class="dropdown-item" id="pre-owned-watches-link" href="../pages/saleWatchesDetailPage.html?name=Pre-Owned Watches">Pre-Owned Watches</a></li>
+    <li><a class="dropdown-item" id="diving-watches-link" href="../pages/saleWatchesDetailPage.html?name=Diving Watches">Diving Watches</a></li>
+    <li><a class="dropdown-item" id="limited-edition-watches-link" href="../pages/saleWatchesDetailPage.html?name=Limited Edition Watches">Limited Edition Watches</a></li>
+  </ul>
+</li>
+<li class="nav-item">
+  <a class="nav-link fw-bold" id="contact-link" href="../pages/Contact.html">Contact us</a>
+</li>
+<li class="nav-item">
+  <a class="nav-link fw-bold" id="faq-link" href="../pages/FAQ.html">FAQ</a>
+</li>
                     </ul>
 
                     <div class="">
@@ -106,14 +95,60 @@ document.querySelector("#navbar").innerHTML = `
         <h5 class="offcanvas-title" id="offcanvasRightLabel">Add to card</h5>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
+     <div class="container">
+       <div class="row " id="notDataFound">
+ 
+       </div>
+     </div>
     <div class="offcanvas-body">
         <!-- Cart items will be rendered here -->
     </div>
-    
+    <div class="d-flex flex-column px-4">
+        <button class="button2 text-capitalize mb-2" onclick="addToCardBtn()"> check to proceed</button>
+        <button class="button2 text-capitalize mb-5"onclick="goShopping()"> shopping now</button>
+    </div>
     <div class="offcanvas-footer">
     </div>
 </div>`;
 
+// Function to set active link
+function setActiveLink(linkId) {
+    // Remove active class from all links
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.classList.remove('active');
+    });
+    document.querySelectorAll('.dropdown-item').forEach(link => {
+        link.classList.remove('active');
+    });
+
+    // Add active class to the clicked link
+    const activeLink = document.getElementById(linkId);
+    if (activeLink) {
+        activeLink.classList.add('active');
+        // Save the active link ID to localStorage
+        localStorage.setItem('activeLink', linkId);
+    }
+}
+
+// Retrieve the active link ID from localStorage and set it as active
+document.addEventListener('DOMContentLoaded', () => {
+    const activeLinkId = localStorage.getItem('activeLink');
+    if (activeLinkId) {
+        setActiveLink(activeLinkId);
+    }
+
+    // Add click event listeners to all nav links
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            setActiveLink(link.id);
+        });
+    });
+    document.querySelectorAll('.dropdown-item').forEach(link => {
+        link.addEventListener('click', () => {
+            setActiveLink(link.id);
+        });
+    });
+});
 // const navLinks = document.querySelectorAll('.nav-link');
 
 // navLinks.forEach(link => {
@@ -126,7 +161,7 @@ document.querySelector("#navbar").innerHTML = `
 document.addEventListener('DOMContentLoaded', () => {
     renderCartItems();
 });
-function addToCard() {
+function addToCardBtn() {
     window.location.href = '../pages/addToCard.html';
 }
 
