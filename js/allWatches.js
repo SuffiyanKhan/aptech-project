@@ -31,7 +31,7 @@ let datarender = async (data) => {
       document.querySelector("#data").innerHTML += `
             <div class="col-lg-3 col-md-4 col-sm-6"onclick="detailPage('${element.id}')">
           <div class="card"
-            style="box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;border: none;cursor: pointer;">
+            style="height:450px; box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;border: none;cursor: pointer;">
             <img src="${element.image}" class="card-img-top" alt="Placeholder Image"
                     style="background-color: #fafafa; ">
             <div class="card-body">
